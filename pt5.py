@@ -31,9 +31,9 @@ X = torch.tensor(data, dtype=torch.float32)
 Y = 2 * X
 
 
-n_sample, n_features = X.shape
+n_sample, n_features = X.shape  # 10, 1
 input_size, output_size = n_features, n_features
-
+# print(input_size, output_size)
 # our model to be trained
 # this part will be more complicated once I learn how to create models with classes
 model = nn.Linear(input_size, output_size)

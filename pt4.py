@@ -21,6 +21,8 @@ Make a linear regression model from scratch, gradually replace the components wi
         i. optimizer.zero_grad()
 3. simple models are already designed (normally we have to design them ourselves)
     a. nn.Linear()
+    b. this is on its own a linear regression model
+    c. in neural network, you add hundreds of these --> that's why you need so much computational power
 
 """
 
