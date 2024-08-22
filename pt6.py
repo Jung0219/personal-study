@@ -32,13 +32,11 @@ class SimpleNN(nn.Module):
 model = SimpleNN(10, 10)
 
 X, Y = datasets.make_regression(
-    n_samples=100, n_features=1, noise=15, random_state=42)
+    n_samples=100, n_features=1, noise=25, random_state=80)
 
 
 X = torch.tensor(X, dtype=torch.float32)
 Y = torch.tensor(Y, dtype=torch.float32).reshape(100, -1)
-
-print(X.shape, Y.shape)
 
 """
 data = [[i] for i in range(10)]
@@ -65,7 +63,7 @@ for name, param in model.named_parameters():
 w = model.weight.item()
 b = model.bias.item()
 
-x = np.linspace(-5, 5, 5)
+x = np.linspace(-3, 3, 5)
 y = w * x + b
 
 plt.scatter(X, Y)
