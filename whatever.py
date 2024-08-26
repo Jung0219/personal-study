@@ -100,6 +100,7 @@ total = 0
 with torch.no_grad():
     for features, labels in test_dataloader:
         predictions = model(features)
+        # print(f"prediction = {torch.ceil(torch.max(predictions))}, value = {labels}")
         _, predicted = torch.max(predictions, 1)
         total += labels.size(0)
         correct += (predicted == labels).sum().item()
