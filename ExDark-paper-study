@@ -1,0 +1,47 @@
+from pathlib import Path
+
+# Define the markdown content again due to code state reset
+exdark_readme_content = """# 🌙 Understanding the ExDark Dataset
+
+**Exclusively Dark (ExDark)** is a dataset specifically curated for object detection and classification in low-light environments. It provides both image-level and object-level annotations, helping researchers address challenges posed by illumination issues in computer vision.
+
+---
+
+## 🔗 Resources
+- **GitHub**: [ExDark GitHub Repo](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset)
+- **Paper**: [ExDark Arxiv PDF](http://cs-chan.com/doc/cviu.pdf)
+
+---
+
+## 📊 Dataset Overview
+- **Total Images**: 7,363 low-light images
+- **Sources**: Internet image search, and sub-sampling from ImageNet, COCO, and PASCAL VOC
+- **Annotations**:
+  - Image-level class labels
+  - Object-level bounding boxes (majority labeled as "people")
+- **Annotation Tool**: Piotr’s Computer Vision Matlab Toolbox
+
+---
+
+## 💡 Lighting Conditions (10 Types)
+Each image is labeled with one of the following lighting types:
+
+| Type     | Description |
+|----------|-------------|
+| **Low**      | Extremely dark, minimal illumination, barely visible details. |
+| **Ambient**  | Weak illumination, no visible light source. |
+| **Object**   | Bright object in a dark scene, no visible light source. |
+| **Single**   | Single visible light source (e.g., streetlight). |
+| **Weak**     | Multiple but faint light sources. |
+| **Strong**   | Multiple bright and visible light sources. |
+| **Screen**   | Bright screen (e.g., TV or monitor) in indoor scenes. |
+| **Window**   | Bright daylight from windows in indoor scenes. |
+| **Shadow**   | Daylight scenes where subjects are in shadow. |
+| **Twilight** | Taken during dawn or dusk with soft natural light. |
+
+---
+
+## 🧾 Image Annotation Format
+
+Each image has a corresponding `.txt` file with annotation entries. Format:
+
